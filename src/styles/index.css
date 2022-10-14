@@ -1,0 +1,133 @@
+/*alterando cor do body para o mobile (retirando roxo de fundo)*/
+@media (max-width: 769px){
+    body{
+        background-color: var(--corLightBody);
+    }
+}
+
+/*para que o box fique centralizado no meio da tela para o login*/
+@media (min-width: 769px){
+    body{
+        overflow: hidden;
+    }
+
+    main {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+    }
+}
+
+/*caixa arredendodada com header e o login*/
+.sectionWrapperLogin{
+    background-color: var(--corLightBody);
+}
+
+@media (min-width: 769px){
+    .sectionWrapperLogin{
+        border-radius: var(--borderRadius);
+        padding: 12px;
+        flex: 0 0 60%;
+    }
+}
+
+/*colocando o login e header lado a lado*/
+.articleFlexLogin {
+    display: flex;
+}
+
+@media (max-width: 769px){
+    .articleFlexLogin {
+        flex-direction: column-reverse;
+    }
+}
+
+@media (min-width: 769px){
+    .articleFlexLogin {
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
+/*wrapper do form*/
+@media (min-width: 769px){
+    .divWrapperForm {
+        max-width: 60%;
+        width: 100%;
+    }
+}
+
+/*limitando tamanho do form para que fique sempre centralizado e tamanho único*/
+@media (max-width: 769px){
+    .divWrapperForm form {
+        padding: 24px 32px;
+    }
+}
+
+@media (min-width: 769px){
+    .divWrapperForm form {
+        max-width: 64%;
+        margin: 0 auto;
+    }
+}
+
+/*header com o letreiro*/
+.divTextHeader{
+    padding: 36px 32px;
+    background-color: var(--corPrimaria);
+}
+
+@media (min-width: 769px){
+    .divTextHeader{
+        padding: 55px;
+        max-width: 36%;
+        width: 100%;
+        border-radius: var(--borderRadius);
+    
+        display: flex;
+        flex-direction: column;
+        min-height: 50vh;
+        justify-content: space-between;
+    }
+}
+
+/*determinando tamanho das letras para o conteúdo do letreiro*/
+.divTextHeader h1,
+.divTextHeader p,
+.divTextHeader span {
+    color: var(--lightText);
+}
+
+/*tamanho fixo para logo*/
+.divTextHeader .sectionLogo img {
+    width: 50px;
+}
+
+/*caixa com icone de usuários*/
+.sectionUsers {
+    margin-top: 55.86px;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+/*colocando foto dos usuários lado a lado*/
+.sectionUsers .divUsersImgs {
+    display: flex;
+    padding-left: 12px;
+}
+
+/*tamanho fixo para foto dos usuários*/
+.sectionUsers .divUsersImgs img{
+    width: 32px;
+    height: 32px;
+    object-fit: cover;
+    border-radius: 100%;
+    border: 1px solid var(--lightText);
+    margin-left: -12px;
+}
+
+/*frase explicativo ao lado das fotos dos usuários*/
+.sectionUsers span {
+    font-size: 12px;
+}

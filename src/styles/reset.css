@@ -1,0 +1,142 @@
+:root {
+    --corPrimaria: #BD0FEA;
+    --corDarkBody: #820AD1;
+    --corLightBody: #F8F9FA;
+    --fontFamily: 'Raleway', sans-serif;
+    --lightText: #F8F9FA;
+    --darkText: #73787C;
+    --borderRadius: 8px;
+    --fundoInputs: #E9ECEF;
+}
+
+:focus-visible {
+    outline: none !important;
+}
+
+body {
+    background-color: var(--corDarkBody);
+    font-family: var(--fontFamily);
+    color: var(--darkText);
+    margin: 0;
+}
+
+h1 {
+    font-weight: bolder;
+    font-size: 42px;
+    margin-bottom: 0;
+}
+
+@media (max-width: 769px){
+    h1 {
+        font-size: 32px;
+    }
+}
+
+h3 {
+    margin-bottom: 3rem;
+    font-size: 20px;
+}
+
+a {
+    color: var(--corPrimaria);
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+p {
+    line-height: 30px;
+}
+
+/*classe e estilo geral para o button*/
+.btn {
+    background-color: var(--corPrimaria);
+    color: var(--lightText);
+    border: 2px solid var(--corPrimaria);
+    outline: none;
+    display: block;
+    width: 100%;
+    border-radius: var(--borderRadius);
+    font-weight: bold;
+    font-size: 16px;
+    padding: 14px 22px;
+    cursor: pointer;
+    margin-top: 1rem;
+    transition: all.1s ease-in-out;
+}
+
+.btn:hover,
+.btn:focus{
+    background-color: transparent;
+    color: var(--corPrimaria);
+}
+
+/*centralizando conteudo*/
+@media (min-width: 769px){
+    .__container {
+        max-width: 60%;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 769px){
+    .__container {
+        max-width: 100%;
+    }
+}
+
+/*estilizando label flutuante para os inputs*/
+.form-floating {
+    position: relative;
+    margin: 1.5rem 0;
+}
+
+.form-floating > input {
+    padding: 1rem 1rem;
+    line-height: 1.25;
+    background-color: var(--fundoInputs);
+    border: 1px solid var(--fundoInputs);
+    border-radius: var(--borderRadius);
+    width: -webkit-fill-available;
+}
+
+.form-floating > input::placeholder {
+    font-size: 0;
+}
+
+.form-floating > input:hover{
+    border: 1px solid var(--darkText);
+}
+
+.form-floating > input:focus,
+.form-floating > input:focus-visible,
+.form-floating>input:not(:placeholder-shown) {
+    padding-top: 1.625rem;
+    padding-bottom: 0.625rem;
+    border: 1px solid var(--corPrimaria);
+    box-shadow: none;
+}
+
+.form-floating > label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    padding: 1rem;
+    pointer-events: none;
+    border: 1px solid transparent;
+    transform-origin: 0 0;
+    font-size: 14px;
+    transition: opacity .1s ease-in-out, transform .1s ease-in-out;
+}
+
+.form-floating > input:focus ~ label,
+.form-floating>input:not(:placeholder-shown)~label{
+    opacity: .65;
+    transform: scale(.85) translateY(-0.5rem) translateX(0.15rem);
+}
+
+#aEsqueciModal{
+    display: block;
+    text-align: right;
+    margin-bottom: 2.5rem;
+}
