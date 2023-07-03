@@ -2,7 +2,7 @@
 
 Esta aplicação tem como único objetivo testar aprendizados em CSS. Ela em si não executa nenhuma função, mas recriei quase perfeitamente a pagina inicial de Login do Nubank.
 
-Link para ver a aplicação: 
+Link para ver a aplicação: https://amandaisme-alt.github.io/Login/
 
  Tecnologias utilizadas:
 
